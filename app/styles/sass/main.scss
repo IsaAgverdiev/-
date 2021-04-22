@@ -32,7 +32,7 @@
 
 	&-title {
 		margin-bottom: 16px;
-		background-image: url('../images/step-1.svg');
+		background-image: url('../images/dist/step-1.svg');
 		@include icon-title;
 	}
 
@@ -57,7 +57,7 @@
 
 	&-title {
 		margin-bottom: 16px;
-		background-image: url('../images/step-2.svg');
+		background-image: url('../images/dist/step-2.svg');
 		@include icon-title;
 	}
 
@@ -75,7 +75,7 @@
 
 	&-title {
 		margin-bottom: 16px;
-		background-image: url('../images/step-3.svg');
+		background-image: url('../images/dist/step-3.svg');
 		@include icon-title;
 	}
 
@@ -147,7 +147,7 @@
 		width: 24px;
 		height: 24px;
 		background-color: #EF483E;
-		background-image: url('../images/checkbox-arrow.svg');
+		background-image: url('../images/dist/checkbox-arrow.svg');
 		background-repeat: no-repeat;
 		background-position: center center;
 		top: 50%;
@@ -186,7 +186,7 @@
 
 	&-title {
 		margin-bottom: 16px;
-		background-image: url('../images/step-4.svg');
+		background-image: url('../images/dist/step-4.svg');
 		@include icon-title;
 	}
 
