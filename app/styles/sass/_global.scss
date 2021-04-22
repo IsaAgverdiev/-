@@ -1,0 +1,112 @@
+@import 'node_modules/bootstrap/scss/bootstrap-reboot.scss'; // Bootstrap Reboot collection
+
+body {
+	font-size: 18px;
+	color: #fff;
+}
+
+label {
+	font-size: 13px;
+}
+
+.title {
+	font-size: 24px;
+	margin-bottom: 16px;
+	font-weight: 700;
+}
+
+.select {
+	width: 172px;
+	position: relative;
+
+	&.active {
+		.select__body {
+			display: block;
+		}
+
+		.select__header {
+			&:before {
+				transform: rotate(-45deg);
+			}
+
+			&:after {
+				transform: rotate(45deg);
+			}
+		}
+	}
+
+	&:before {
+		content: '';
+		position: absolute;
+		right: 0px;
+		width: 70px;
+		z-index: 1;
+		height: 100%;
+		background-color: red;
+		background: linear-gradient(90deg, rgba(255, 255, 255, .5) 10%, rgba(255, 255, 255, 1) 60%, rgba(255, 255, 255, 1) 100%);
+	}
+
+	&__header {
+		display: flex;
+		align-items: center;
+		height: 44px;
+		background-color: #fff;
+		color: #000;
+		cursor: pointer;
+
+		&:before,
+		&:after {
+			content: '';
+			position: absolute;
+			z-index: 2;
+			right: 14px;
+			width: 6px;
+			height: 1px;
+			background-color: #000;
+			transform: rotate(45deg);
+			transition: .2s ease-in-out;
+		}
+
+		&:after {
+			transform: rotate(-45deg);
+			right: 10px;
+		}
+
+
+	}
+
+	&__current {
+		position: relative;
+		font-size: 14px;
+		padding: 6px 12px;
+		white-space: nowrap;
+		color: #cfcfcf;
+		overflow: hidden;
+	}
+
+	&__current--active {
+		color: #000;
+	}
+
+	&__body {
+		display: none;
+		position: absolute;
+		left: 0;
+		right: 0;
+		top: 100%;
+		z-index: 3;
+		background-color: #fff;
+		color: #000;
+	}
+
+	&__item {
+		font-size: 14px;
+		padding: 6px 12px;
+		cursor: pointer;
+
+		&:hover {
+			color: #fff;
+			background-color: #EF483E;
+		}
+	}
+}
