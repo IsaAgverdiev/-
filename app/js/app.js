@@ -2,7 +2,7 @@
 document.addEventListener('DOMContentLoaded', () => {
 	let select = function () {
 		let selectHeader = document.querySelectorAll('.select__header');
-		let selectItem = document.querySelectorAll('.select__item')
+		let selectItem = document.querySelectorAll('.select__item');
 
 		selectHeader.forEach(item => {
 			item.addEventListener('click', toggleOpen)
@@ -35,11 +35,31 @@ document.addEventListener('DOMContentLoaded', () => {
 		function openItemsTemp() {
 			itemsTemp.classList.toggle('form__cargo-itemsTemp--active')
 		}
-		// function checkedBox() {
-		// }
 		checkbox.addEventListener('click', openItemsTemp)
+	};
+
+	let radioButtons = function () {
+		let radioButtons = document.querySelectorAll('.form__time-radio');
+		radioButtons.forEach(item => {
+			if (item) {
+				item.addEventListener('click', disabledBtn)
+			};
+		});
+
+		function disabledBtn() {
+			let id = this.id;
+			let timeBtn = document.querySelectorAll('.form__time-btn');
+			if (id == 'radio-1') {
+				timeBtn[0].classList.remove('form__time-btn--disabled')
+				timeBtn[1].classList.add('form__time-btn--disabled')
+			} else {
+				timeBtn[1].classList.remove('form__time-btn--disabled')
+				timeBtn[0].classList.add('form__time-btn--disabled')
+			}
+		}
 	}
 
 	select();
 	checkbox();
+	radioButtons();
 });

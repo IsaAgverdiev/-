@@ -4,7 +4,7 @@
 <main class="main">
 	<div class="wrapper">
 		<div class="container">
-			<form class="form" action="">
+			<form class="form">
 				<h1 class="form__title">FTL: Прямая машина</h1>
 				<div class="form__route">
 					<legend class=" title form__route-title">Маршрут</legend>
@@ -83,7 +83,7 @@
 							</div>
 						</div>
 						<div class="form__cargo-item">
-							<label class="form__cargo-label">Объявленная ценность, ₽ </label>
+							<label class="form__cargo-label">Объявленная ценность,&nbsp;₽ </label>
 							<input class="form__cargo-text" type="text" placeholder=">1">
 						</div>
 					</div>
@@ -106,12 +106,20 @@
 				</div>
 				<div class="form__time">
 					<legend class="title form__time-title">Время</legend>
-					<label class="form__time-items">Когда прибыть на точку
-						<label class="form__time-item" for="">
-							<input type="radio">Андес не указан
+					<label class="form__time-items">
+						<div class="form__time-texts">
+							<span>Когда прибыть на точку</span>
+							<span>700км в день</span>
+						</div>
+						<label class="form__time-item">
+							<input class="form__time-radio" type="radio" name="address" id="radio-1" checked>
+							<span class="form__time-radioText">Андес не указан</span>
+							<button class="form__time-btn" data-btn="radio-1">НЕ ВЫБРАНО</button>
 						</label>
-						<label class="form__time-item" for="">
-							<input type="radio">Андес не указан
+						<label class="form__time-item">
+							<input class="form__time-radio" type="radio" name="address" id="radio-2">
+							<span class="form__time-radioText">Андес не указан</span>
+							<button class="form__time-btn form__time-btn--disabled" data-btn="radio-2">НЕ ВЫБРАНО</button>
 						</label>
 					</label>
 					<div class="form__comment">
@@ -127,6 +135,6 @@
 			</div>
 		</div>
 	</div>
-	<main />
+</main>
 
-	<!--#include virtual="/parts/footer.html" -->
+<!--#include virtual="/parts/footer.html" -->
