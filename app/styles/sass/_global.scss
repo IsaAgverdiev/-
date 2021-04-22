@@ -9,6 +9,13 @@ label {
 	font-size: 13px;
 }
 
+input {
+	outline: none;
+	border: none;
+}
+input:focus {
+	border: 1px solid #EF483E;
+}
 .title {
 	font-size: 24px;
 	margin-bottom: 16px;
